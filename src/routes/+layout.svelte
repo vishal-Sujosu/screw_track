@@ -1,6 +1,6 @@
 <script>
-	import Layout from '../dashboard/Layout.svelte';
 	import '../app.css';
+	import Layout from '$lib/components/dashboard/Layout.svelte';
 </script>
 
 <Layout>
