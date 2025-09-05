@@ -1,8 +1,38 @@
 <script>
+	import Button from "./button/Button.svelte";
+	import { CircleX } from 'lucide-svelte';
+  import Select from '$lib/components/Select.svelte';
+	import Textfield from "./textfield/Textfield.svelte";
+    let country = '';
+  let countries = [
+    { value: 'us', label: 'United States' },
+    { value: 'ca', label: 'Canada' },
+    { value: 'uk', label: 'United Kingdom' }
+  ];
 	export let title;
 </script>
 
-<div class="flex flex-col flex-wrap sm:flex-row">
+<div class="grid lg:grid-cols-4  flex-wrap sm:flex-row">
+	<Button className="btn-primary btn-sm" isOutlined={false}> <span class="loading loading-spinner"></span> Small Accent</Button>
+
+	<Button className="btn-info btn-sm" isOutlined={false}>error</Button>
+	<div >
+		<Button className="btn-error btn-md btn-rounded max-w-30" isOutlined={false}><CircleX /> error</Button>
+
+	</div>
+
+	
+<Select
+  label=""
+  bind:value={country}
+  options={countries}
+  placeholder="Select your country"
+/>
+
+<Textfield value={title} label="Name" placeholder="Enter your name" />
+
+
+
 	<!-- <div class="relative max-w-screen-xl mx-auto mb-12">
 		<div
 			class="pricing-box max-w-lg mx-auto rounded-lg shadow overflow-hidden lg:max-w-none lg:flex"
