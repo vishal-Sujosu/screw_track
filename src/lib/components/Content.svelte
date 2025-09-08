@@ -1,8 +1,10 @@
 <script>
 	import Button from "./button/Button.svelte";
 	import { CircleX } from 'lucide-svelte';
-  import Select from '$lib/components/Select.svelte';
+  	import Select from '$lib/components/Select.svelte';
 	import Textfield from "./textfield/Textfield.svelte";
+	import { toasts } from "../store/toast/store";
+
     let country = '';
   let countries = [
     { value: 'us', label: 'United States' },
@@ -10,12 +12,47 @@
     { value: 'uk', label: 'United Kingdom' }
   ];
 	export let title;
+
+	  let count = 0;
+  const dispatchToasts = () => {
+    let timerId = setInterval(() => {
+      count++;
+      toasts.info(
+        `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+        saepe itaque quod dolorem rem autem? - ${count}`,
+        "bottom",
+        "center",
+        5000
+      );
+    }, 2000);
+
+    // after 12 seconds stop
+    setTimeout(() => {
+      clearInterval(timerId);
+    }, 12000);
+  };
+
+
 </script>
 
 <div class="grid lg:grid-cols-4  flex-wrap sm:flex-row">
 	<Button className="btn-primary btn-sm" isOutlined={false}> <span class="loading loading-spinner"></span> Small Accent</Button>
 
-	<Button className="btn-info btn-sm" isOutlined={false}>error</Button>
+  <button
+    class="btn m-2"
+    on:click={() => {
+      toasts.info("Info toast to show at top, left.", "top", "end", 60000);
+      toasts.success("Success toast at the top right", "top", "end", 6000);
+      toasts.warning(
+        "Warning toast at the bottom, left.",
+        "top",
+        "end",
+        6000
+      );
+      toasts.error("Error toast at the bottom right", "top", "end", 0);
+    }}
+  >Show toast</button>
+	
 	<div >
 		<Button className="btn-error btn-md btn-rounded max-w-30" isOutlined={false}><CircleX /> error</Button>
 

@@ -1,6 +1,6 @@
 <script>
 	import ThemeSwitch from '$lib/components/themeSwitch/ThemeSwitch.svelte';
-	import { openSidebar } from './store';
+	import { openSidebar } from '../../store/sideBar/store';
 </script>
 
 <header class="bg-white dark:bg-gray-700 h-16 items-center relative shadow w-full z-10 md:h-20">

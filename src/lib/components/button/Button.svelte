@@ -5,7 +5,7 @@
   export let disabled = false;
   export let isOutlined = false;
   export let className = '';
-  export let handleOnClick = () => {};
+  export let handleOnClick =() => {};
 </script>
 
 <button
