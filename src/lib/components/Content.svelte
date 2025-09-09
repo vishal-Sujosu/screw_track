@@ -89,6 +89,41 @@
 	It was in these fleeting moments that she felt most alive, grounded not in the chaos of the day, but in the serenity of dusk.
 </h3>
 
+<div class="card w-96 bg-base-100 shadow-xl">
+  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <div class="card-body">
+    <h2 class="card-title">
+      Shoes!
+      <div class="badge badge-secondary">NEW</div>
+    </h2>
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <div class="card-actions justify-end">
+      <div class="badge badge-outline">Fashion</div> 
+      <div class="badge badge-outline">Products</div>
+    </div>
+  </div>
+</div>
+
+<div class="card w-96 bg-base-100 shadow-lg border-1 border-gray-300">
+  <div class="card-body">
+    <span class="badge badge-xs badge-warning">Most Popular</span>
+    <div class="flex justify-between">
+      <h2 class="text-3xl font-bold">Premium</h2>
+      <span class="text-xl">$29/mo</span>
+    </div>
+    <ul class="mt-6 flex flex-col gap-2 text-xs">
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+        <span>High-resolution image generation</span>
+      </li>
+ 
+    </ul>
+    <div class="mt-6">
+      <button class="btn btn-primary btn-block">Subscribe</button>
+    </div>
+  </div>
+</div>
+
 	<!-- <div class="relative max-w-screen-xl mx-auto mb-12">
 		<div
 			class="pricing-box max-w-lg mx-auto rounded-lg shadow overflow-hidden lg:max-w-none lg:flex"

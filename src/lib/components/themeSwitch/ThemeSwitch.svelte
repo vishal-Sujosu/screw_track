@@ -33,11 +33,11 @@
 	<label for="theme-toggle" /> -->
 	{#if darkMode}
 		<button on:click={handleSwitchDarkMode}>
-			<Sun class="text-gray-dark"  />
+			<Sun class="text-white"  />
 		</button>
 	{:else}
 		<button on:click={handleSwitchDarkMode}>
-			<Moon/>
+			<Moon class="text-black "/>
 		</button>
 	{/if}
 </div>
