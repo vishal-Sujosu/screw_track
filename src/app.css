@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,7 +12,16 @@ body {
 	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 	@apply bg-white dark:bg-gray-darkest text-black dark:text-white text-center;
 	 font-family: var(--font-default);
+	font-size: clamp(14px, 2vw, 18px);
+  	font-weight: 450;
 
 }
 
+
+
+@media (max-width: 640px) {
+  body {
+    font-weight: 300;
+  }
+}
 

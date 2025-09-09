@@ -4,6 +4,7 @@
   	import Select from '$lib/components/Select.svelte';
 	import Textfield from "./textfield/Textfield.svelte";
 	import { toasts } from "../store/toast/store";
+	import Typography from "./Typography.svelte";
 
     let country = '';
   let countries = [
@@ -69,12 +70,24 @@
 <Textfield value={title} label="Name" placeholder="Enter your name" />
 
 
-<p>
+<Typography  className="mb-4">
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+
+</Typography>
+
+<h2>
 	Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
 	The sun dipped below the horizon, painting the sky in shades of orange and pink. 
 	A gentle breeze rustled the leaves, and the world seemed to pause for a moment of quiet reflection. 
 	It was in these fleeting moments that she felt most alive, grounded not in the chaos of the day, but in the serenity of dusk.
-</p>
+</h2>
+
+<h3 class="font-semibold font-lg">
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+	The sun dipped below the horizon, painting the sky in shades of orange and pink. 
+	A gentle breeze rustled the leaves, and the world seemed to pause for a moment of quiet reflection. 
+	It was in these fleeting moments that she felt most alive, grounded not in the chaos of the day, but in the serenity of dusk.
+</h3>
 
 	<!-- <div class="relative max-w-screen-xl mx-auto mb-12">
 		<div
