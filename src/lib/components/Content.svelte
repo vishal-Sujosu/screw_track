@@ -36,20 +36,20 @@
 </script>
 
 <div class="grid lg:grid-cols-4  flex-wrap sm:flex-row">
-	<Button className="btn-primary btn-sm" isOutlined={false}> <span class="loading loading-spinner"></span> Small Accent</Button>
+	<Button className="bg-blue-dark text-white btn-sm hover:bg-blue-default" isOutlined={false}> <span class="loading bg-white loading-spinner"></span> Small Accent</Button>
 
   <button
-    class="btn m-2"
+    class="btn bg-pink-dark hover:bg-pink-light m-2"
     on:click={() => {
-      toasts.info("Info toast to show at top, left.", "top", "end", 60000);
-      toasts.success("Success toast at the top right", "top", "end", 6000);
+      toasts.info("Info toast to show at top, left.", "bottom", "end", 6000);
+      toasts.success("Success toast at the top right", "bottom", "end", 6000);
       toasts.warning(
         "Warning toast at the bottom, left.",
-        "top",
+        "bottom",
         "end",
         6000
       );
-      toasts.error("Error toast at the bottom right", "top", "end", 0);
+      toasts.error("Error toast at the bottom right", "bottom", "end", 0);
     }}
   >Show toast</button>
 	

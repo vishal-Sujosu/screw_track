@@ -10,7 +10,8 @@
     {@const x = key.substring(key.indexOf("-") + 1)}
     <div class={`toast  toast-${x} toast-${y} z-50 `}>
       {#each value as toast}
-        <Toast toastClass={`bg-${toast.type}`} icon={toast.icon} id={toast.id} msg={toast.msg} timeout={toast.timeout}  />
+        
+        <Toast type={toast.type} icon={toast.icon} id={toast.id} msg={toast.msg} timeout={toast.timeout}  />
       {/each}
     </div>
   {/each}

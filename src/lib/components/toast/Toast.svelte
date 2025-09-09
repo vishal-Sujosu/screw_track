@@ -1,14 +1,14 @@
 <script lang="ts">
-   let toastClass;
-   export { toastClass as class };
+  export let type ;
   export let icon;
   export let id;
   export let msg="";
   export let timeout=0;
   import { toasts } from "../../store/toast/store";
+  import { CircleX } from 'lucide-svelte';
 </script>
 
-<div   class="toast-base alert {toastClass}">
+<div   class="toast-base alert {type === "info" ? "alert-info" : ""} {type === "success" ? "alert-success" : ""} {type === "warning" ? "alert-warning" : ""} {type === "error" ? "alert-error" : ""} shadow-lg">
   <div>
     {#if icon}
     <icon />
@@ -20,7 +20,12 @@
           // console.log("onClickDismiss");
           toasts.delete(id);
         }}
-        class="btn btn-ghost hover:none"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button
+        class=""
+        >
+        <CircleX on:click={()=>{
+          toasts.delete(id);
+        }} class="h-5 w-5 cursor-pointer " />
+         </button
       >
     {/if}
   </div>
@@ -33,5 +38,10 @@
     max-width: 350px;
     min-width: 250px;
     margin: 0.5rem;
+    display: flex ;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    flex-direction:column ;
   }
 </style>
