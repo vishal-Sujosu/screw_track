@@ -3,7 +3,7 @@
 	import { openSidebar } from '../../store/sideBar/store';
 </script>
 
-<header class="bg-white dark:bg-gray-700 h-16 items-center relative shadow w-full z-10 md:h-20">
+<header class="bg-white dark:bg-gray-darkest h-16 items-center relative shadow w-full z-10 md:h-20">
 	<div class="flex flex-center flex-col h-full justify-center mx-auto px-3 relative">
 		<div class="flex items-center pl-1 relative w-full sm:ml-0 sm:pr-2 lg:max-w-68">
 			<div class="flex left-0 relative w-3/4">

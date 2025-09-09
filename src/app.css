@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-default: 'Inter', sans-serif;
+}
+
 body {
 	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-	@apply bg-white dark:bg-gray-700 text-black dark:text-white text-center;
+	@apply bg-white dark:bg-gray-darkest text-black dark:text-white text-center;
+	 font-family: var(--font-default);
+
 }
 
 
