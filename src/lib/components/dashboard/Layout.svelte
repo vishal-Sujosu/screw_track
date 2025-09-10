@@ -14,6 +14,8 @@
 		mainContainer: `flex flex-col h-screen pl-0 w-full lg:pl-24 lg:space-y-4`
 	};
 
+	export let siteBarItems = [];
+
 	if (browser) {
 		page.subscribe(() => {
 			// close Sidebar on route changes when sidebar is open
@@ -27,7 +29,7 @@
 <div class={style.container}>
 	<div class="flex items-start">
 		<Overlay />
-		<Sidebar mobileOrientation="end" />
+		<Sidebar siteBarItems={siteBarItems} mobileOrientation="end" />
 		<div class={style.mainContainer}>
 			<TopBar />
 			<main class={style.main}>

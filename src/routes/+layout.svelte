@@ -1,10 +1,7 @@
 <script>
-	import '../app.css';
-	import Layout from '$lib/components/dashboard/Layout.svelte';
-	import Notifications from '$lib/components/toast/Notifications.svelte';
+	import Notifications from "$lib/components/toast/Notifications.svelte";
+
 </script>
 
-<Layout>
-	<Notifications />
-	<slot />
-</Layout>
+<Notifications />
+<slot />

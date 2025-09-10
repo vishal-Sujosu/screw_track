@@ -1,0 +1,3 @@
+<div>
+    Contractor dashboard
+</div>

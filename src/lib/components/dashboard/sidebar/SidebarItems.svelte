@@ -11,11 +11,13 @@
 		close: `lg:duration-700 lg:ease-out lg:invisible lg:opacity-0 lg:transition-all`,
 		open: `lg:duration-500 lg:ease-in lg:h-auto lg:opacity-100 lg:transition-all lg:w-auto`
 	};
+
+	export let siteBarItems = [];
 </script>
 
 <ul class="overflow-auto h-[80vh] overflow-x-hidden ">
 	<li >
-		{#each primeRoutes as item (item.title)}
+		{#each siteBarItems as item (item.title)}
 		<div class="hover:bg-yellow-light ml-0 rounded-lg">
 			<a
 				href={item.link}

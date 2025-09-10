@@ -15,6 +15,7 @@
 	};
 
 	export let mobileOrientation = 'end';
+	export let siteBarItems;
 </script>
 
 <aside
@@ -23,7 +24,7 @@
 >
 	<div class={style.container}>
 		<SidebarHeader />
-		<SidebarItems />
+		<SidebarItems siteBarItems={siteBarItems} />
 	</div>
 </aside>
 
