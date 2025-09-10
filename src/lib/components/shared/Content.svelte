@@ -15,29 +15,13 @@
 	export let title;
 
 	  let count = 0;
-  const dispatchToasts = () => {
-    let timerId = setInterval(() => {
-      count++;
-      toasts.info(
-        `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-        saepe itaque quod dolorem rem autem? - ${count}`,
-        "bottom",
-        "center",
-        5000
-      );
-    }, 2000);
 
-    // after 12 seconds stop
-    setTimeout(() => {
-      clearInterval(timerId);
-    }, 12000);
-  };
 
 
 </script>
 
 <div class="grid lg:grid-cols-4  flex-wrap sm:flex-row">
-	<Button className="bg-blue-dark text-white btn-sm hover:bg-blue-default" isOutlined={false}> <span class="loading bg-white loading-spinner"></span> Small Accent</Button>
+	<Button className="bg-blue-dark text-white btn-sm hover:bg-blue-default"> <span class="loading bg-white loading-spinner"></span> Small Accent</Button>
 
   <button
     class="btn bg-pink-dark hover:bg-pink-light m-2"
@@ -55,7 +39,7 @@
   >Show toast</button>
 	
 	<div >
-		<Button className="btn-error btn-md btn-rounded max-w-30" isOutlined={false}><CircleX /> error</Button>
+		<Button className="btn-error btn-md btn-rounded max-w-30" ><CircleX /> error</Button>
 
 	</div>
 
