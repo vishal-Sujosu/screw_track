@@ -1,7 +1,7 @@
 <script>
 	import { primeRoutes } from './data';
 	import { page } from '$app/stores';
-	import { sidebarOpen } from '../../../store/sideBar/store';
+	import { sidebarOpen } from '../../../../store/sideBar/store';
 
 	const style = {
 		title: `mx-4 text-sm whitespace-pre`,

@@ -1,5 +1,5 @@
 <script>
-  import { toasts } from "../../store/toast/store";
+  import { toasts } from "../../../store/toast/store";
   import Toast from "./Toast.svelte";
 </script>
 

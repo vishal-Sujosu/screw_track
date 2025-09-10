@@ -1,6 +1,6 @@
 <script>
-	import Layout from '$lib/components/dashboard/Layout.svelte';
-	import { subContractorRoutes } from '$lib/components/dashboard/sidebar/data';
+	import Layout from '$lib/components/shared/dashboard/Layout.svelte';
+	import { subContractorRoutes } from '$lib/components/shared/dashboard/sidebar/data';
 	import '../../../app.css';
 </script>
 

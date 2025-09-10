@@ -1,5 +1,5 @@
 <script>
-	import Notifications from "$lib/components/toast/Notifications.svelte";
+	import Notifications from "$lib/components/ui/toast/Notifications.svelte";
 
 </script>
 

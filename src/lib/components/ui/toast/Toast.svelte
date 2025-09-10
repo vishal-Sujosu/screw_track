@@ -4,7 +4,7 @@
   export let id;
   export let msg="";
   export let timeout=0;
-  import { toasts } from "../../store/toast/store";
+  import { toasts } from "../../../store/toast/store";
   import { CircleX } from 'lucide-svelte';
 </script>
 

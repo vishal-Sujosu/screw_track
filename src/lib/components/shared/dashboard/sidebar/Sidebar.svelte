@@ -1,5 +1,5 @@
 <script>
-	import { sidebarOpen } from '../../../store/sideBar/store';
+	import { sidebarOpen } from '../../../../store/sideBar/store';
 	import SidebarItems from './SidebarItems.svelte';
 	import SidebarHeader from './SidebarHeader.svelte';
 

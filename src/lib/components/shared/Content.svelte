@@ -1,10 +1,10 @@
 <script>
-	import Button from "./button/Button.svelte";
+	import Button from "../ui/button/Button.svelte";
 	import { CircleX } from 'lucide-svelte';
-  	import Select from '$lib/components/Select.svelte';
-	import Textfield from "./textfield/Textfield.svelte";
-	import { toasts } from "../store/toast/store";
-	import Typography from "./Typography.svelte";
+  	import Select from '../ui/Select.svelte';
+	import Textfield from "../ui/textfield/Textfield.svelte";
+	import { toasts } from "../../store/toast/store";
+	import Typography from "../ui/Typography.svelte";
 
     let country = '';
   let countries = [
@@ -90,7 +90,7 @@
 </h3>
 
 <div class="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure></figure>
   <div class="card-body">
     <h2 class="card-title">
       Shoes!
