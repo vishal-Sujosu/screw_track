@@ -1,5 +1,5 @@
 <script>
-	import { closeSidebar, sidebarOpen } from '../../../store/sideBar/store';
+	import { closeSidebar, sidebarOpen } from '$lib/store/sideBar/store';
 </script>
 
 <!-- Overlay will only be visible on small screens to emphasize the focus on sidebar when it is open.-->

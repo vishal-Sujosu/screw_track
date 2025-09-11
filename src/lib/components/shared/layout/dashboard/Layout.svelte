@@ -5,8 +5,8 @@
 
 	import TopBar from './TopBar.svelte';
 	import Overlay from './Overlay.svelte';
-	import Sidebar from './sidebar/Sidebar.svelte';
-	import { closeSidebar, sidebarOpen } from '../../../store/sideBar/store';
+	import Sidebar from './Sidebar.svelte';
+	import { closeSidebar, sidebarOpen } from '$lib/store/sideBar/store';
 
 	const style = {
 		container: `h-screen overflow-hidden relative`,
