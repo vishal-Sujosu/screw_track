@@ -10,12 +10,12 @@ export const primeRoutes = [
     {
         title: 'All Comapnies',
         icon: Landmark,
-        link: '/admin/companies'
+        link: '/admin/applications'
     },
     {
         title: 'Users',
         icon: Users,
-        link: '/admin/users'
+        link: '/admin/analytics'
     },
     {
         title: 'GIS',
