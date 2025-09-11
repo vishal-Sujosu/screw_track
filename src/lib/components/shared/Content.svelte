@@ -1,10 +1,10 @@
 <script>
 	import Button from "../ui/button/Button.svelte";
-	import { CircleX } from 'lucide-svelte';
+	import { CircleX, TableRowsSplit } from 'lucide-svelte';
   	import Select from '../ui/Select.svelte';
 	import Textfield from "../ui/textfield/Textfield.svelte";
-	import { toasts } from "../../store/toast/store";
 	import Typography from "../ui/Typography.svelte";
+	import {showError , showInfo} from '../../utils/Toast'
 
     let country = '';
   let countries = [
@@ -14,7 +14,9 @@
   ];
 	export let title;
 
-	  let count = 0;
+  let activeTab = 1;
+
+  const tabs = ['Tab 1', 'Tab 2', 'Tab 3'];
 
 
 
@@ -26,15 +28,17 @@
   <button
     class="btn bg-pink-dark hover:bg-pink-light m-2"
     on:click={() => {
-      toasts.info("Info toast to show at top, left.", "bottom", "end", 6000);
-      toasts.success("Success toast at the top right", "bottom", "end", 6000);
-      toasts.warning(
-        "Warning toast at the bottom, left.",
-        "bottom",
-        "end",
-        6000
-      );
-      toasts.error("Error toast at the bottom right", "bottom", "end", 0);
+		showInfo("This is an info toast");
+		showError("This is an error toast");
+    //   toasts.info("Info toast to show at top, left.", "bottom", "end", 6000);
+    //   toasts.success("Success toast at the top right", "bottom", "end", 6000);
+    //   toasts.warning(
+    //     "Warning toast at the bottom, left.",
+    //     "bottom",
+    //     "end",
+    //     6000
+    //   );
+    //   toasts.error("Error toast at the bottom right", "bottom", "end", 0);
     }}
   >Show toast</button>
 	
@@ -107,6 +111,29 @@
     </div>
   </div>
 </div>
+<div class="w-full ">
+<div class="tabs ">
+  {#each tabs as tab, i}
+    <a
+      class="tab  {i === activeTab ? 'tab-active' : ''}"
+      on:click={() => activeTab = i}
+    >
+      {tab}
+    </a>
+  {/each}
+</div>
+<div class="p-4  rounded-box mt-2">
+  {#if activeTab === 0}
+    <p>Content for Tab 1</p>
+  {:else if activeTab === 1}
+    <p>Content for Tab 2</p>
+  {:else if activeTab === 2}
+    <p>Content for Tab 3</p>
+  {/if}
+</div>
+
+</div>
+
 
 	<!-- <div class="relative max-w-screen-xl mx-auto mb-12">
 		<div
