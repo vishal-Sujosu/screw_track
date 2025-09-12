@@ -92,7 +92,7 @@
   </div>
 </div>
 
-<div class="card w-96 bg-base-100 shadow-lg border-1 border-gray-300">
+<div class="card w-96  shadow-lg border-1 border-gray-300">
   <div class="card-body">
     <span class="badge badge-xs badge-warning">Most Popular</span>
     <div class="flex justify-between">
